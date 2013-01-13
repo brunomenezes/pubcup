@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="<g:message code='event.label' default='Event'/>" />
+		<g:set var="entityName" value=""+<g:message code='event.label' default='Event'>+""></g:set>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
