@@ -1,0 +1,144 @@
+/*pubcup v0.1*/
+/*reset*/
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,cite,em,img,q,strong,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;font-size:100%;font-family:inherit;font-weight:normal;border:0;}
+body {font:75%/1.2 arial,sans-serif;color:#888;}
+strong,b{font-weight:bold;}
+ol, ul, nav {list-style:none;}
+blockquote, q {quotes:none;}
+table {border-collapse:separate;border-spacing:0;}
+address{font-style:normal;}
+a {text-decoration:none;color:#0af;}
+a:hover {text-decoration:underline;}
+p {line-height:1.5;margin-bottom:5px;}
+input, textarea {font:normal 1em/1.2 arial,sans-serif;color:#888;border:1px solid #ccc;padding:5px;border-radius:2px;}
+
+.bt {border:1px solid #ccc;border-radius:3px;background:#888;color:#fff;padding:5px 10px;display:inline-block;cursor:pointer;}
+.bt:hover {border-color:#888;text-decoration:none;box-shadow:0 0 5px #000;}
+.btn {text-indent:-9999em;border:0;height:24px;width:24px;cursor:pointer;display:block;background:url(../img/ico.png) no-repeat -999em -999em;}
+
+.more-info .bt {background:#f60;}
+.add-event .bt:before {content:'+';font-weight:bold;margin-right:5px;}
+.my-local {padding:3px 2px 3px 4px;border:1px solid #888;background:#fff;float:left;border-radius:3px;margin-right:5px;box-shadow:1px 1px 3px #888;}
+.my-local:hover {box-shadow:0 0 5px #000;}
+.my-local .btn {background-position:0 -250px}
+
+/*temp*/
+#page,.content-area {position:relative;}
+#header {height:55px;box-shadow:0 1px 10px #000;z-index:9;position:relative;
+background: linear-gradient(top, #fff 3%, #e3e3e3 100%);
+background: -o-linear-gradient(top, #fff 3%, #e3e3e3 100%);
+background: -moz-linear-gradient(top, #fff 3%, #e3e3e3 100%);
+background: -webkit-linear-gradient(top, #fff 3%, #e3e3e3 100%);
+background: -ms-linear-gradient(top, #fff 3%, #e3e3e3 100%);
+}
+#footer {height:22px;padding:10px;box-shadow:0 -1px 10px #000;z-index:9;position:relative;
+background: linear-gradient(top, #e3e3e3 3%, #fff 100%);
+background: -o-linear-gradient(top, #e3e3e3 3%, #fff 100%);
+background: -moz-linear-gradient(top, #e3e3e3 3%, #fff 100%);
+background: -webkit-linear-gradient(top, #e3e3e3 3%, #fff 100%);
+background: -ms-linear-gradient(top, #e3e3e3 3%, #fff 100%);
+}
+h1.logo {float:left;text-indent: -999em;background: url(../img/logo.png) no-repeat 0 0;width:210px;height:45px;margin:5px 10px;}
+.header .help {float:right;margin:17px 10px;}
+.header .help .btn{background-position:0 -300px;}
+.header .help .btn:hover {border-radius:5px;box-shadow:1px 1px;}
+
+#toasterPlace {position:relative;}
+
+/*search*/
+.search-area {position:absolute;top:10px;right:44px;left:230px;z-index:10;}
+.search-area .btn {background-position:0 0;position:absolute;right:5px;top:6px;}
+.search-area fieldset {background:#fff;border:1px solid #888;border-radius:3px;padding-right:35px;position:relative;padding-bottom:1px;height:34px;}
+.searchKey {width:99%;border:0;height: 33px;padding: 0;line-height: 30px;text-indent: 10px;}
+.search-area .lbl {display:none;}
+
+/*infobar*/
+.infobar {position:absolute;width:100%;bottom:0;z-index:10;background:rgba(0,0,0,.9);display:none;}
+.infobar > div {padding:5px 20px;}
+.infobar .local-data {padding-top:20px;}
+.infobar .event-action{text-align:right;padding-bottom:20px}
+/*local-data*/
+.local-data .tit {color:#fff;font-weight:bold;font-size:1.333em;}
+.local-data address {font-style:normal;}
+.local-data address .city {display:block;}
+/*actions*/
+.actions {position:absolute;top:10px;right:10px}
+.actions .bt {background:#f60;border-color:#fff;height:30px;line-height:32px;padding:0 10px;}
+/*event*/
+.event, .event-list {overflow:hidden;padding:10px 10px 0 50px;}
+.event-list {border:1px solid #333;background:#222;margin:10px 0;}
+.event-data .vs1,.event-data .vs2 {display:block;width:40%;}
+.event-data .score {width:20%;margin:0 10px;text-align:center;float:left;white-space:nowrap;}
+.event-data .vs1 {float:left;margin-left:-40px;margin-right:10px;}
+.event-data .vs2 {float:right;text-align:right;}
+.event-data .name {display:block;margin-top:5px;color:#fff;}
+.event-data .score .vs {font-size:3em;}
+.event-list li{margin-bottom:10px}
+.event-list li:after {content:'';display:block;clear:both;margin-bottom:5px;}
+/*flags*/
+.event .flag > span{overflow:hidden;display:inline-block;width:74px;height:0;padding-top:54px;background:url(../img/sprite-flags.png) no-repeat left -999em;}
+.event .flag .bra {background-position:0 0;}
+.event .flag .egy {background-position:0 -100px;}
+.event .flag .irq {background-position:0 -200px;}
+.event .flag .zaf {background-position:0 -300px;}
+.event .flag .esp {background-position:0 -400px;}
+.event .flag .usa {background-position:0 -500px;}
+.event .flag .ita {background-position:0 -600px;}
+.event .flag .nzl {background-position:0 -700px;}
+.event-list .flag > span {overflow:hidden;height:0;display:inline-block;background:url(../img/sprite-flags.png) no-repeat left -999em;width:48px;padding-top:35px;}
+.event-list .flag .bra {background-position:0 -800px;}
+.event-list .flag .egy {background-position:0 -900px;}
+.event-list .flag .irq {background-position:0 -1000px;}
+.event-list .flag .zaf {background-position:0 -1100px;}
+.event-list .flag .esp {background-position:0 -1200px;}
+.event-list .flag .usa {background-position:0 -1300px;}
+.event-list .flag .ita {background-position:0 -1400px;}
+.event-list .flag .nzl {background-position:0 -1500px;}
+
+/*show-location*/
+.show-location #content,.associate-event #content  {padding:20px;}
+.show-location h1.tit, .associate-event h1.tit {background:#222;color:#fff;padding:10px;font-size:2em;}
+.show-location .local-data {overflow:hidden;p}
+.show-location .description {margin:20px 0;font-size:1.166em;}
+.show-location .event-head {overflow:hidden;margin-top:20px;}
+.show-location .event-head .stit {float:left;padding-top:10px;font-size:1.5em;color:#000;font-weight:bold;}
+.show-location .event-head .add-event {float:right;}
+.show-location .event-list {background:#fff;border:1px solid #ccc;border-radius:3px;padding:10px;}
+
+/*create*/
+.skip, .nav {display:none;}
+.associate-event .stit {padding-top:10px;margin-bottom:10px;font-size:1.5em;color:#000;font-weight:bold;}
+.associate-event .event-list {border:1px solid #ccc;background:#fff;border-radius:3px;padding:10px;}
+
+/*other*/
+#close {font-weight:bold;position:absolute;top:10px;right:10px;font-size:1.5em;cursor:pointer;}
+.search-category-pubcup {background-color: lightyellow;padding-left: 10px;font-weight: bold;border-color: darkgoldenrod;border-width: 1px;border-style: groove;border-radius: 5px;}
+.search-category-google {background-color:lightskyblue;padding-left: 10px;font-weight: bold;border-color: darkslateblue;border-width: 1px;border-style: groove;border-radius: 5px;}
+li a {-webkit-transition: padding .2s;-moz-transition: padding .2s;-o-transition: padding .2s;transition: padding .2s;}
+a:hover {padding-left: 25px !important;}
+
+/*helper*/
+.helper-page {position:absolute;z-index:999;top:55px;left:0;background-color:#fff;width:100%;display:none;}
+#close-helper {font-weight:bold;position:absolute;top:10px;right:30px;font-size:1.4em;cursor:pointer;}
+.logo-big {margin:0px auto;width:311px;height:267px;text-indent:-999em;display:block;background: url(../img/logo-big.png) no-repeat 0 0;}
+.helper-page hr {color:#ccc;width:80%;margin-bottom:20px;}
+.helper-page p {width:80%;margin:0px auto;font-size:14px;}
+
+/*gamesList*/
+
+#games-list {border:1px solid #000;border-radius:3px;background:rgba(0,0,0,.8);margin:10px 0;display:none;height:60px;overflow:auto;position:absolute;right:10px;width:250px;margin-top:20px;}
+#close-game-list {font-weight:bold;position:absolute;top:10px;right:10px;font-size:1.0em;cursor:pointer}
+#games-list ul {padding:15px;}
+
+/*responsive*/
+@media (min-width: 769px) { 
+.infobar {position:absolute;height:100%;width:300px;left:0;z-index:10;background:rgba(0,0,0,.9);}
+h1.logo {float:left;text-indent: -999em;background: url(../img/logo.png) no-repeat 0 0;margin:5px 10px;width:210px;height:45px;}
+.search-area {position:absolute;top:10px;right:44px;left:230px;z-index:10;}
+}
+@media (max-width: 768px) { 
+.infobar {position:absolute;width:100%;height:auto;bottom:0;z-index:10;background:rgba(0,0,0,.9);}
+.infobar .event-list {display:none;}
+h1.logo {display:block;text-indent: -999em;background: url(../img/logo.png) no-repeat 0 0;margin:5px 10px;width:50px;height:45px;}
+.search-area {position:absolute;top:10px;right:44px;left:70px;z-index:10;}
+}
