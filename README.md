@@ -1,6 +1,6 @@
 PubCup  
 =========
-_Don't Lose Any Game on Fifa World Cup 2014_
+*Don't Miss Any Game on Fifa World Cup 2014*
 ---------
 * * *
 
