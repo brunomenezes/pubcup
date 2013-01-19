@@ -2,7 +2,6 @@ PubCup
 =========
 *Don't Miss Any Game on Fifa World Cup 2014*
 ---------
-* * *
 
 __Short History__ 
 > We Participated on a grails 48 hours event (hackaton)
