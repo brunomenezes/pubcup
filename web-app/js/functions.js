@@ -12,18 +12,18 @@ function resizeElementToFullScreen( element ) {
 }
 
 jQuery(function($) {
-    var helpContent = $('.helper-page');
+	$(window).resize( resizeElementToFullScreen( $(".helper") ) );
 
     window.onresize = function(event) {
         resizeElementToFullScreen( $(".helper") );
-        resizeElementToFullScreen(helpContent);
         if( $(".map").length )
         	resizeElementToFullScreen( $(".map") );
     }
 
+    resizeElementToFullScreen( $(".helper") );
+
     $('.help').click(function() {
-        resizeElementToFullScreen(helpContent);
-    	helpContent.fadeIn('slow');
+    	$('.helper-page').fadeIn('slow');
     });
 
     $('#close-helper').click(function() {

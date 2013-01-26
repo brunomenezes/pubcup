@@ -9,17 +9,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 		<title>
 			<g:layoutTitle default="PubCup" />
 		</title>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-		
-		<r:require module="bootstrap"/>
 		<r:require module="jquery"/>
 		<r:require module="functions"/>
 
@@ -40,25 +35,31 @@
 					</div>
 				</div>
 			</div>
-			<div id="content">
-				<g:layoutBody />
-			</div>
-			<div id="footer" role="contentinfo">
+		</div>
+
+		<div id="content">
+			<g:layoutBody />
+		</div>
+		<footer id="footer" role="contentinfo" style="position: absolute; bottom: 0; width: 100%; z-index: 100; padding: 0">
+			<div class="footer" style="padding: 10px">
+				<p>PubCup - A great way not to lose any match of 2014 FIFA World Cup</p> - 
 				<div id="fb-root"></div>
 				<div class="fb-like" data-href="http://pubcup.com" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 			</div>
-			<div class="helper-page">
-				<span id="close-helper">[x]</span>
-				<h1 class="logo-big"><span class="lnk">PubCup</span></h1>
-				<hr  />
-				<p><g:message code="index.helper.welcome.text" default="Address" /></p>
-			</div>
-		</div>
+		</footer>
 
+		
+
+		<div class="helper-page">
+			<span id="close-helper">[x]</span>
+			<h1 class="logo-big"><span class="lnk">PubCup</span></h1>
+			<hr  />
+			<p><g:message code="index.helper.welcome.text" default="Address" /></p>
+		</div>
 		<div id="spinner" class="spinner" style="display:none;">Loading&hellip;</div>
 		
 		<r:layoutResources />
-		<div id="fb-root"></div>
+	
 		<script>
 		(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
