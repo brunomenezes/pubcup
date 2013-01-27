@@ -65,7 +65,10 @@ function loadToaster(obj){
 	$("#toasterPlace").load(config.contextPath + '/home/showLocationToaster', {locationId: obj.id}, function(){
         reloadCountDown();
     });
-    $(".infobar").show();
+    var infobar = $(".infobar");
+    if(!(infobar.css("display") == "block")) {
+        infobar.toggle("drop");
+    }
 }
 
 function recolorOthersPins() {
@@ -194,14 +197,11 @@ jQuery( function($) {
                             longitude: item.lng
                         }, category : "Pubcup Results", origin: "pubcup"}
                     });
-                    console.log("pubcup ownes!");
                     if(pubcupRs && googleRs) response(pubcupRs.concat(googleRs));
         		}
         	});
         },
         select: function (event, ui) {
-            console.log("select");
-            console.log(ui);
             $("#txtLatitude").val(ui.item.latitude);
             $("#txtLongitude").val(ui.item.longitude);
             var locationData = {
@@ -223,7 +223,7 @@ jQuery( function($) {
     });
 
     $(".infobar").on('click', '#close' , function() {
-        $(".infobar").hide();
+        $(".infobar").toggle("drop");
     });
 	
 	$('#center').click(function(){

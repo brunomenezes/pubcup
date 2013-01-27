@@ -1,12 +1,11 @@
 modules = {
-   application {}
    
    jquery {
-		resource url: '/js/jquery-1.8.2.js', disposition: 'head'
+		resource url: 'js/jquery-1.9.0.js', disposition: 'head'
    }
 
    functions {
-      resource url: 'js/functions.js?token=1123', disposition: 'head'
+      resource url: 'js/functions.js', disposition: 'head'
    }
    
    bootstrapcss {
@@ -35,9 +34,9 @@ modules = {
    
    jqueryui {
    		dependsOn 'jquery'
-   		resource url: 'js/jquery.ui/jquery-ui-1.9.1.custom.min.js', disposition: 'head'
+   		resource url: 'js/jquery.ui/jquery-ui-1.10.0.custom.min.js', disposition: 'head'
       resource url: 'js/jquery.ui/jquery-ui-timepicker-addon.js'
-      resource url: 'js/jquery.ui/jquery-ui-1.9.1.custom.min.css'
+      resource url: 'js/jquery.ui/jquery-ui-1.10.0.custom.min.css'
       resource url: 'js/jquery.ui/jquery-ui-timepicker-addon.css'
    }
    

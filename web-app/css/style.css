@@ -157,7 +157,7 @@ h1.logo {float:left;text-indent: -999em;background: url(../img/logo.png) no-repe
 .search-category-pubcup {background-color: lightyellow;padding-left: 10px;font-weight: bold;border-color: darkgoldenrod;border-width: 1px;border-style: groove;border-radius: 5px;}
 .search-category-google {background-color:lightskyblue;padding-left: 10px;font-weight: bold;border-color: darkslateblue;border-width: 1px;border-style: groove;border-radius: 5px;}
 li a {-webkit-transition: padding .2s;-moz-transition: padding .2s;-o-transition: padding .2s;transition: padding .2s;}
-li.ui-menu-item a:hover {padding-left: 25px !important;}
+.ui-state-focus {padding-left: 25px !important;}
 
 /*helper*/
 .helper-page {position:absolute;z-index:999;top:55px;left:0;background-color:#fff;width:100%;display:none;}

@@ -15,7 +15,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-		<r:require module="jquery"/>
 		<r:require module="functions"/>
 
 		<script type="text/javascript">
@@ -51,7 +50,7 @@
 		
 
 		<div class="helper-page">
-			<span id="close-helper">[x]</span>
+			<span id="close" class="close-helper">[x]</span>
 			<h1 class="logo-big"><span class="lnk">PubCup</span></h1>
 			<hr  />
 			<p><g:message code="index.helper.welcome.text" default="Address" /></p>
