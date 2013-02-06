@@ -20,11 +20,6 @@ class GameController {
     }
 
     def save() {
-        if(params.teams.size() != 2) {
-            flash.message = message(code: 'game.teams.persist')
-            redirect(action: "create", params: params)
-            return
-        }
         def gameInstance = new Game(params)
         if (!gameInstance.save(flush: true)) {
             render(view: "create", model: [gameInstance: gameInstance])
@@ -42,7 +37,6 @@ class GameController {
             redirect(action: "list")
             return
         }
-
         [gameInstance: gameInstance]
     }
 
@@ -53,16 +47,10 @@ class GameController {
             redirect(action: "list")
             return
         }
-
         [gameInstance: gameInstance]
     }
 
     def update(Long id, Long version) {
-        if(params.teams.size() != 2) {
-            flash.message = message(code: 'game.teams.persist')
-            redirect(action: "edit")
-            return
-        }
         def gameInstance = Game.get(id)
         if (!gameInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'game.label', default: 'Game'), id])

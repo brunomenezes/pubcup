@@ -52,7 +52,7 @@ modules = {
    }
    
    showLocation {
-	   dependsOn 'jquery', 'bootstrapcss'
+	   dependsOn 'jquery'
 	   resource url: 'js/showLocation.js'
    }
 }

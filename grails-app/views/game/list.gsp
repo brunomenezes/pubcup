@@ -23,17 +23,24 @@
 			<table>
 				<thead>
 					<tr>
-						<th class="sortable">Game</th>
+					
 						<g:sortableColumn property="date" title="${message(code: 'game.date.label', default: 'Date')}" />
+					
+						<th><g:message code="game.teamA.label" default="Team A" /></th>
+					
+						<th><g:message code="game.teamB.label" default="Team B" /></th>
 					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${gameInstanceList}" status="i" var="gameInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						<td><g:link action="show" id="${gameInstance.id}">${gameInstance}</g:link>
-						</td>
+					
 						<td><g:link action="show" id="${gameInstance.id}">${fieldValue(bean: gameInstance, field: "date")}</g:link></td>
+					
+						<td>${fieldValue(bean: gameInstance, field: "teamA")}</td>
+					
+						<td>${fieldValue(bean: gameInstance, field: "teamB")}</td>
 					
 					</tr>
 				</g:each>

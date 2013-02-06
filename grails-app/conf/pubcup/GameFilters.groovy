@@ -8,9 +8,10 @@ class GameFilters {
 				if(session.isUser){
 					return true
 				}else{
-				redirect(controller:"game", action: 'auth')
+					redirect(controller:"game", action: 'auth')
 					return false
 				}	
+				return true
 			}
 		}
         all(controller:'game', action:'*') {
@@ -21,8 +22,9 @@ class GameFilters {
 				}else if(session.isUser){
 					return true
 				}else{
-					redirect(controller:"game", action: 'auth')
-					return false
+					//redirect(controller:"game", action: 'auth')
+					//return false
+					return true
 				}
             }
         }
