@@ -65,7 +65,10 @@ function loadToaster(obj){
 	$("#toasterPlace").load(config.contextPath + '/home/showLocationToaster', {locationId: obj.id}, function(){
         reloadCountDown();
     });
-    $(".infobar").show();
+    var infobar = $(".infobar");
+    if(!(infobar.css("display") == "block")) {
+        infobar.toggle("drop");
+    }
 }
 
 function recolorOthersPins() {
@@ -83,7 +86,6 @@ function recolorOthersPins() {
 function createMarker(obj){
 	var hash = getKey(obj);
 	var marker = plotMapControl[hash]; 
-    console.log("marker : " + marker + "| hash : " + hash);
 	if(!marker){
 		marker = new google.maps.Marker({
     		position: new google.maps.LatLng(obj.lat,obj.lng),
@@ -150,7 +152,7 @@ jQuery( function($) {
         	loadOnMap($(this).val());
     });
 
-
+    //reescrevendo  parte do render menu para ficar separado por categoria de busca.
     $.widget( "custom.autocomplete", $.ui.autocomplete, {
         _renderMenu: function( ul, items ) {
           var that = this,
@@ -168,37 +170,38 @@ jQuery( function($) {
 	
 	$("#searchKey").autocomplete({
         source: function (request, response) {
+            var googleRs, pubcupRs;
+            geocoder.geocode({ 'address': request.term }, function (results, status) {
+                googleRs = $.map(results, function (item) {
+                    return {label:{
+                        label: item.formatted_address,
+                        value: item.formatted_address,
+                        latitude: item.geometry.location.lat(),
+                        longitude: item.geometry.location.lng()
+                    }, category: "Google Results", origin: "google"}
+                });
+                if(pubcupRs && googleRs) response(pubcupRs.concat(googleRs));
+            });
+            
         	$.ajax({
         		url: config.contextPath + '/home/find',
         		traditional: true,
         		data: {q : request.term},
         		success : function(data) {
-	        		geocoder.geocode({ 'address': request.term }, function (results, status) {
-	                	var r = $.map(data, function(item){
-	                		return {label:{
-	                			id: item.id,
-	                			label: item.name,
-	                			value: item.name,
-	                			latitude: item.lat,
-	                			longitude: item.lng
-	                		}, category : "Pubcup Results", origin: "pubcup"}
-	                	});
-	                	var googleRs = $.map(results, function (item) {
-	                    	return {label:{
-	                        	label: item.formatted_address,
-	                        	value: item.formatted_address,
-	                        	latitude: item.geometry.location.lat(),
-	                        	longitude: item.geometry.location.lng()
-	                    	}, category: "Google Results", origin: "google"}
-	                	});
-	                	response(r.concat(googleRs));
-	            	});
+                    pubcupRs = $.map(data, function(item){
+                        return {label:{
+                            id: item.id,
+                            label: item.name,
+                            value: item.name,
+                            latitude: item.lat,
+                            longitude: item.lng
+                        }, category : "Pubcup Results", origin: "pubcup"}
+                    });
+                    if(pubcupRs && googleRs) response(pubcupRs.concat(googleRs));
         		}
         	});
         },
         select: function (event, ui) {
-            console.log("select");
-            console.log(ui);
             $("#txtLatitude").val(ui.item.latitude);
             $("#txtLongitude").val(ui.item.longitude);
             var locationData = {
@@ -220,7 +223,7 @@ jQuery( function($) {
     });
 
     $(".infobar").on('click', '#close' , function() {
-        $(".infobar").hide();
+        $(".infobar").toggle("drop");
     });
 	
 	$('#center').click(function(){

@@ -153,6 +153,12 @@ h1.logo {float:left;text-indent: -999em;background: url(../img/logo.png) no-repe
 /*other*/
 #close {position:absolute;top:10px;right:10px;text-indent:-999em;cursor:pointer;display:inline-block;background:url(../img/temp-close.png) no-repeat -2px -2px;z-index:10;height:20px;width:20px;}
 
+/*search result*/
+.search-category-pubcup {background-color: lightyellow;padding-left: 10px;font-weight: bold;border-color: darkgoldenrod;border-width: 1px;border-style: groove;border-radius: 5px;}
+.search-category-google {background-color:lightskyblue;padding-left: 10px;font-weight: bold;border-color: darkslateblue;border-width: 1px;border-style: groove;border-radius: 5px;}
+li a {-webkit-transition: padding .2s;-moz-transition: padding .2s;-o-transition: padding .2s;transition: padding .2s;}
+.ui-state-focus {padding-left: 25px !important;}
+
 /*helper*/
 .helper-page {position:absolute;z-index:999;top:55px;left:0;background-color:#fff;width:100%;display:none;}
 #close-helper {font-weight:bold;position:absolute;top:10px;right:30px;font-size:1.4em;cursor:pointer;}
@@ -189,7 +195,7 @@ h1.logo {display:block;text-indent: -999em;background: url(../img/logo.png) no-r
 
 /*temp*/
 #map, .map {height:545px;}
-.infobar {display:block!important}
+.infobar {display:block}
 
 
 /*bts*/
