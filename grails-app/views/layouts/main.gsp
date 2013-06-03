@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> 
-<html lang="en" class="no-js">
-<!--<![endif]-->
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>
-			<g:layoutTitle default="PubCup" />
-		</title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
 		<r:require module="functions"/>
 
 		<script type="text/javascript">
@@ -23,30 +14,33 @@
 		
 		<g:layoutHead/>
 		<r:layoutResources />
+		<title>
+			<g:layoutTitle default="PubCup" />
+		</title>
 	</head>
 	<body>
 		<div id="page">
-			<div id="header">
-				<div class="header">
+			<header id="header">
+				<div class="header" role="banner">
 					<h1 class="logo"><a href="${createLink(uri: '/') }" class="lnk" style="height:100%;display:block">PubCup</a></h1>
 					<div class="help">
 						<a href="#" class="btn">Ajuda?</a>
 					</div>
 				</div>
-			</div>
-		</div>
+			</header>
 
-		<div id="content">
-			<g:layoutBody />
-		</div>
-		<footer id="footer" role="contentinfo" style="position: absolute; bottom: 0; width: 100%; z-index: 100; padding: 0">
-			<div class="footer" style="padding: 10px">
-				<p>PubCup - A great way not to lose any match of 2014 FIFA World Cup</p> - 
-				<div id="fb-root"></div>
-				<div class="fb-like" data-href="http://pubcup.com" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-			</div>
-		</footer>
 
+			<div id="content">
+				<g:layoutBody />
+			</div>
+
+			<footer id="footer" role="contentinfo">
+				<div class="footer" style="padding: 10px">
+					<p class="tx-footer">PubCup - A great way not to lose any match of 2014 FIFA World Cup</p>
+					<iframe class="fb-footer" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpubcupoficial&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=110043989105314" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</footer>
+		</div>
 		
 
 		<div class="helper-page">
@@ -58,15 +52,5 @@
 		<div id="spinner" class="spinner" style="display:none;">Loading&hellip;</div>
 		
 		<r:layoutResources />
-	
-		<script>
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=107271416014120";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		</script>
 	</body>
 </html>

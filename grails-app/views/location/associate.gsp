@@ -7,12 +7,9 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value=""+<g:message code='event.label' default='Event'>+""></g:set>
 		
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<r:require module="jquery"/>
 	</head>
@@ -50,6 +47,9 @@
 							</li>
 						</g:each>
 					</ul>
+					<span class="back">
+						<a href="javascript:history.back()" class="bt">Voltar</a>
+					</span>
 					<span class="create-event">
 						<input class="bt" type="submit" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 					</span>

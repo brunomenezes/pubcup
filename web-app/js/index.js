@@ -271,3 +271,4 @@ jQuery( function($) {
 
     resizeElementToFullScreen( $(".map") );
 });
+

@@ -6,13 +6,13 @@ function turnEditable(obj) {
 	$(textArea).attr('id','locationDescription');
 	$(textArea).val(content);
 
-	var submitButton = jQuery('<a />');
+	var submitButton = jQuery('<a class="bt" />');
 	$(submitButton).attr( 'href','javascript:updateLocationDescription();' );
 	$(submitButton).attr( 'name','updateButton' );
 	$(submitButton).attr( 'id','updateButton' );
 	$(submitButton).html( 'Atualizar descrição' );
 
-	var cancelButton = jQuery('<a />');
+	var cancelButton = jQuery('<a class="bt" />');
 	$(cancelButton).attr( 'href', 'javascript:revertUpdate()');
 	$(cancelButton).attr( 'name', 'revertUpdate');
 	$(cancelButton).attr( 'id', 'revertUpdate');
