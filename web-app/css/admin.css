@@ -1,0 +1,13 @@
+/*pubcup admin v0.1*/
+table {width:100%;border-spacing:0 0;border-collapse:collapse;margin:10px 0;}
+form,ol.game {margin:10px 0;}
+.buttons {margin:20px 0;}
+#content {padding:20px;}
+h1.tit {background:#222;color:#fff;padding:10px;font-size:2em;}
+
+table th, table td {border:1px solid #ccc;padding:10px;}
+table thead th {background:#ccc;}
+table tbody tr:hover td {background:#f4f4f4;}
+table th,table th a {color:#333;font-weight:bold;}
+table th a {text-decoration:underline;font-size:1.083em}
+table th a:after {content:'\203A';padding-left:5px;display:inline-block;}
