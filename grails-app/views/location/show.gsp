@@ -28,8 +28,8 @@
 				<g:each in="${locationInstance.events}" var="event">
 					<li class="it-el-sl">
 						<span class="vs1">
-							<span class="flag">
-								<span class="${event.game?.teamA?.code?.toLowerCase()}"></span>
+							<span class="flag-evl">
+								<span class="f-evl ${event.game?.teamA?.code?.toLowerCase()}"></span>
 								<strong class="name">${event.game.teamA?.name?.encodeAsHTML()}</strong>
 							</span>
 						</span>
@@ -37,8 +37,8 @@
 							<span class="vs">x</span>
 						</span>
 						<span class="vs2">
-							<span class="flag">
-								<span class="${event?.game?.teamB?.code?.toLowerCase()}"></span>
+							<span class="flag-evl">
+								<span class="f-evl ${event?.game?.teamB?.code?.toLowerCase()}"></span>
 								<strong class="name">${event?.game?.teamB?.name?.encodeAsHTML()}</strong>
 							</span>
 						</span>

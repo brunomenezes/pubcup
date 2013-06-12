@@ -65,7 +65,7 @@
 						<span class="lbl">Search</span>
 						<input type="hidden" id="txtLatitude" name="txtLatitude" />
 						<input type="hidden" id="txtLongitude" name="txtLongitude" />
-						<input type="text" id="searchKey" class="searchKey" name="searchKey" />
+						<input type="text" id="searchKey" class="searchKey" name="searchKey" placeholder="Digite um endereço ou nome de local" />
 					</label>
 					<span class="search">
 						<input class="btn" type="button" value="<g:message code="search.button" default="Search"/>" />

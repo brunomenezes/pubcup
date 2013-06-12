@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
-		<r:require module="bootstrapcss"/>
+		<meta name="layout" content="admin">
+		%{-- <r:require module="bootstrapcss"/> --}%
 		<g:set var="entityName" value="${message(code: 'game.label', default: 'Game')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 		<style type="text/css">
@@ -26,7 +26,7 @@
 				</div>	
 			</div>
 			<div class="form-actions well">
-				<input type="submit" class="btn" value="ok">
+				<input type="submit" class="bt" value="ok">
 			</div>	
 		</form>
 	</body>
