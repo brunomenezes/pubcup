@@ -1,5 +1,4 @@
 <%@ page import="pubcup.Game" %>
-<%@ page import="pubcup.TeamsEnum" %>
 <!DOCTYPE html>
 <html>
 	<head>
