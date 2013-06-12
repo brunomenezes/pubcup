@@ -6,6 +6,9 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
+// setting work dir to target subdirectory (instead of user home directory)
+grails.work.dir = 'target'
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
