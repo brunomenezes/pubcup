@@ -29,8 +29,8 @@
 					<meta itemprop="startDate" content="${event?.game?.formattedDate()}T${event?.game?.formattedTime()}">
 					<meta itemprop="name" content="${event.game?.teamA?.name?.encodeAsHTML()} vs ${event.game?.teamB?.name?.encodeAsHTML()}">
 					<span class="vs1">
-						<span class="flag">
-							<span class="${event.game?.teamA?.code?.toLowerCase()}"></span>
+						<span class="flag-ev">
+							<span class="f-ev ${event.game?.teamA?.code?.toLowerCase()}"></span>
 							<strong class="name"> ${event.game?.teamA?.name?.encodeAsHTML()} </strong>
 						</span>
 					</span>
@@ -42,8 +42,8 @@
 					</span>
 
 					<span class="vs2">
-						<span class="flag">
-							<span class="${event.game?.teamB?.code?.toLowerCase()}"></span>
+						<span class="flag-ev">
+							<span class="f-ev ${event.game?.teamB?.code?.toLowerCase()}"></span>
 							<strong class="name"> ${event.game?.teamB?.name?.encodeAsHTML()} </strong>
 						</span>
 					</span>
@@ -66,8 +66,8 @@
 							<li class="it-evl">
 								<span class="event-date-hour">${event?.game?.formattedDate()} / ${event?.game?.formattedTime()}</span>
 								<span class="vs1">
-									<span class="flag">
-										<span class="${event.game?.teamA?.code?.toLowerCase()}"></span>
+									<span class="flag-evl">
+										<span class="f-evl ${event.game?.teamA?.code?.toLowerCase()}"></span>
 										<strong	class="name">${event.game.teamA?.name?.encodeAsHTML()}</strong>
 									</span>
 								</span> 
@@ -75,8 +75,8 @@
 									<span class="vs">x</span>
 								</span>
 								<span class="vs2">
-									<span class="flag">
-										<span class="${event?.game?.teamB?.code?.toLowerCase()}"></span>
+									<span class="flag-evl">
+										<span class="f-evl ${event?.game?.teamB?.code?.toLowerCase()}"></span>
 										<strong class="name">${event?.game?.teamB?.name?.encodeAsHTML()}</strong>
 									</span>
 								</span>
